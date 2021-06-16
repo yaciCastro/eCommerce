@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import CartWidget from "../CartWidget/CartWidget"
+import CartWidget from "../CartWidget/CartWidget.js"
 
 class NavBar extends Component {
+    
     render() {
         return (
             <nav className="nav">
