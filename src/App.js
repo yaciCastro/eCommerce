@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/CartWidget/ItemListContainer'
 
 //Escribir componentes: function y clase
 // componentes clases definidos mediante clase
@@ -17,7 +16,6 @@ class App extends Component {
     return (
       <div>
         <NavBar/>
-        <ItemListContainer/>
       </div>
     )
   }

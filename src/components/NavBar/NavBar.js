@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import CartWidget from "../CartWidget/CartWidget"
 
 class NavBar extends Component {
     render() {
         return (
             <nav className="nav">
-                <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
                 <div className="nav-div">
                     <a className="logo nav-link">Logo</a>
                     <button class="nav-toggle" aria-label="Abrir menú">
@@ -23,10 +21,7 @@ class NavBar extends Component {
                         </li>
                         <li className="nav-menu-item">
                             <a className="nav-menu-link nav-link">Contacto</a>
-                        </li>
-                        <li className="nav-menu-item">
-                            <a><CartWidget/></a>
-                        </li>
+                        </li>   
                     </ul>
                 </div>
             </nav>
