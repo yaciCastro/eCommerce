@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './CartWidget.css'
 
 class CartWidget extends Component {
     render() {
