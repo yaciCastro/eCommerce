@@ -5,9 +5,9 @@ import './Item.css'
     return (
       <div className='container'>
         <div className='card'>
-          <img alt="img" img={dataItem.img}/>
+          <img alt="" src={dataItem.img}/>
           <h4>{dataItem.name} - U$D{dataItem.price}</h4>
-          <p>description={dataItem.description}</p>
+          <p>{dataItem.description}</p>
         </div>
       </div>
     );

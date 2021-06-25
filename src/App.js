@@ -9,17 +9,17 @@ import Contacto from './components/Contacto/Contacto.js'
 import ItemList from './components/CartWidget/ItemList.js'
 
 const itemsData = [
-  { id: 1, name: "Pajaro", price: 20, descriptio:"bordado pajaro azul", img:'./img/pajaro'},
-  { id: 2, name: "Conejo", price: 10,description:"bordado conejo", img:'./img/conejo' },
-  { id: 3, name: "Zorro", price: 300, description:"zorro", img:'./img/zorro' },
-  { id: 4, name: "Gato", price: 860, description:"bordado gato", img:'./img/gato'}
+  { id: 1, name: "Pajaro", price: 20, description:"bordado pajaro azul", img:'./img/pajaro.jpg'},
+  { id: 2, name: "Zorro", price: 150, description:"zorro", img:'./img/zorrito.jpg' },
+  { id: 3, name: "Gato", price: 60, description:"bordado gato", img:'./img/gato.jpg'},
+  { id: 5, name: "Conejo", price: 100, description:"bordado conejo", img:'./img/conejo.jpg'}
 ];
 function App() {
   const [items] = useState(itemsData);
   return (  
 
       <div>
-        <NavBar data={items}/>
+        <NavBar/>
         <ItemList data={items}/>
         <Router>
           <Switch>

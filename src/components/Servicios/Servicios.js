@@ -3,7 +3,7 @@ import React from 'react'
 function Servicios() {
     return (
         <div>
-            <h1> LA PESTAÑA Servicios</h1>
+            <h1 className="title">Servicios</h1>
 
         </div>
     )
