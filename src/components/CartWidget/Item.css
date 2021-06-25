@@ -8,9 +8,9 @@
 .title{
     text-align: center;
     font-size: 40px;
-    color: blueviolet;
-    margin-top: 100px;
-    font-weight: 100;
+    color: #e1bee7;
+    margin: 100px;
+    font-weight: bold;
 }
 
 .container{
@@ -33,12 +33,12 @@
     transition: all 0.25s;
 }
 
-.container .car:hover{
+.container .card:hover{
     transform: translateY(-15px);
     box-shadow:  0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-.container.card img{
+.container .card img{
     width: 330px;
     height: 220px;
 }
