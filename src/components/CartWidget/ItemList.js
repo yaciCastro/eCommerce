@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import ItemCount from "./ItemCount";
 import './ItemList.css'
 
 const ItemsList = ({ data }) => {
@@ -13,6 +14,7 @@ const ItemsList = ({ data }) => {
             return (
             <ul key={item.id}>
                 <Item dataItem={item} />
+                <ItemCount stock='5' initial='1'/>
             </ul>
             );
         })}

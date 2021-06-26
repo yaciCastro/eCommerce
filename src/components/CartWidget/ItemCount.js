@@ -1,37 +1,23 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import {Button} from 'semantic-ui-react'
+import './ItemCount.css'
 
-class ItemCount extends Component{
+function ItemCount(props){
 
-    constructor(){
-        super();
-        this.state = {
-            count: 1,
-            stock:  5,
-            initial: 1
-            
-        }
-    }
 
-    handleCounterUp = (stock) => {
-        this.setState({count: this.state.count + 1 && this.state.count === stock && this.setState({count: this.state.count + 0})})
-    }
+    const[count, setCount] = useState(0)
 
-    handleCounterDown = (initial) => {
-        this.setState({count: this.state.count - 1 && this.state.count === initial && this.setState({count: this.state.count - 0})})
-       
-    }
-
-    render() {
-        return (
-            <div>
-                <Button onClick={this.handleCounterUp} primary>+</Button>
-                <p>{this.state.count}</p>
-                <Button onClick={this.handleCounterDown} primary>-</Button>
-                <Button> agregar al carrito</Button>
+    return (
+        <div>
+            <p className="centro">{count}</p>
+            <div className="contador centro">
+                <Button className="btn btn1" onClick={() => setCount(count+1)}>+</Button>
+                <Button className="btn btn1">agregar al carrito</Button>
+                <Button className="btn btn1" onClick={() => setCount(count-1)}>-</Button>
             </div>
+        </div>
         )
     }
-}
+
 
 export default ItemCount;   
