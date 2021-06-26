@@ -4,17 +4,16 @@ import ItemCount from "./ItemCount";
 import './ItemList.css'
 
 const ItemsList = ({ data }) => {
-  /*const [items, setItems] = useState(itemsData);*/
 
   return (
      <div>
-        <h1 class="title">Items List</h1>
-        <div className="list">
+        <h1 class="title">Productos</h1>
+        <div className="list centrado">
         {data.map((item) => {
             return (
             <ul key={item.id}>
                 <Item dataItem={item} />
-                <ItemCount stock='5' initial='1'/>
+                <ItemCount stock={5} initial={1}/>
             </ul>
             );
         })}

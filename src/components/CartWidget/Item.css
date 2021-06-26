@@ -52,3 +52,8 @@
     font-size: 16px;
     font-weight: 300;
 }
+
+.centro{
+    display: flex;
+    justify-content: center;
+}

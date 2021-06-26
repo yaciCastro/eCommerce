@@ -6,8 +6,8 @@ import './Item.css'
       <div className='container'>
         <div className='card'>
           <img alt="" src={dataItem.img}/>
-          <h4>{dataItem.name} - U$D{dataItem.price}</h4>
-          <p>{dataItem.description}</p>
+          <h4 className="centro">{dataItem.name} - U$D{dataItem.price}</h4>
+          <p className="centro">{dataItem.description}</p>
         </div>
       </div>
     );

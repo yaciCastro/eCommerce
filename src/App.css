@@ -3,4 +3,8 @@
   color: aliceblue;
 }
 
-/* id={5} title={pepo} description={cubo} price={'900'} picture={'./logo512.png'}*/
+.centrado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
