@@ -1,0 +1,41 @@
+.contador{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.btn{
+    border-radius: 6px;
+    background: transparent; 
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #9e95a0;
+}
+
+.btn1{
+    background-color: white; 
+    color: #af8eb5; 
+    border: 2px solid #af8eb5;
+  
+}
+
+.btn1:hover {
+    background-color: #af8eb5;
+    color: white;
+ }
+
+.centro{
+    display: flex;
+    justify-content: center;
+}

@@ -20,7 +20,7 @@ function App() {
 
       <div>
         <NavBar/>
-        <ItemList data={items}/>
+        <ItemList className="center" data={items}/>
         <Router>
           <Switch>
             <Route path='/' exact component={App}/>
