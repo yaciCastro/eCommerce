@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Item.css'
 
   const Item = ({ dataItem }) => {
     return (
-      <div className='container'>
+      <Link className='container' to="/itemDetail">
         <div className='card'>
           <img alt="" src={dataItem.img}/>
-          <h4 className="centro">{dataItem.name} - U$D{dataItem.price}</h4>
+          <h4 className="centro">{dataItem.name} - ${dataItem.price}</h4>
           <p className="centro">{dataItem.description}</p>
         </div>
-      </div>
+      </Link>
     );
   };
   
