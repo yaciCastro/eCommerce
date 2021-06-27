@@ -1,35 +1,49 @@
 import React, { useState } from 'react'
 import './App.css';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+//COMPONENTS
 import NavBar from './components/NavBar/NavBar'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Servicios from './components/Servicios/Servicios.js'
-import Diseños from './components/Diseños/Diseños.js'
-import Galeria from './components/Galeria/Galeira.js'
-import Contacto from './components/Contacto/Contacto.js'
-import ItemList from './components/CartWidget/ItemList.js'
+import ItemList from './components/Item/ItemList.js'
+import ItemDetail from './components/Item/ItemDetail';
+
+//VIEWS
+import Servicios from './views/Servicios/Servicios.js'
+import Diseños from './views/Diseños/Diseños.js'
+import Galeria from './views/Galeria/Galeira.js'
+import Contacto from './views/Contacto/Contacto.js'
+
+//IMG
+import imagenes from './img/imagenes.js';
+
+//await esperar dice espera a que el fetch termine
+//funciones que devuelven promesas son funciones asincromas 
+// 
 
 const itemsData = [
-  { id: 1, name: "Pajaro", price: 20, description:"bordado pajaro azul", img:'./img/pajaro.jpg'},
-  { id: 2, name: "Zorro", price: 150, description:"zorro", img:'./img/zorrito.jpg' },
-  { id: 3, name: "Gato", price: 60, description:"bordado gato", img:'./img/gato.jpg'},
-  { id: 5, name: "Conejo", price: 100, description:"bordado conejo", img:'./img/conejo.jpg'}
+  { id: 1, name: "Pajaro", price: 20, description:"bordado pajaro azul", img:imagenes.pajaro},
+  { id: 2, name: "Zorro", price: 150, description:"zorro", img:imagenes.zorrito },
+  { id: 3, name: "Gato", price: 60, description:"bordado gato", img:imagenes.gato},
+  { id: 4, name: "Conejo", price: 100, description:"bordado conejo", img:imagenes.conejo}
 ];
+
 function App() {
   const [items] = useState(itemsData);
   return (  
 
       <div>
-        <NavBar/>
-        <ItemList className="center" data={items}/>
         <Router>
-          <Switch>
-            <Route path='/' exact component={App}/>
-              <Route path='/servicios' component={Servicios}/>
-              <Route path='/diseños'  component={Diseños}/>
-              <Route path='/galeria'  component={Galeria}/>
-              <Route path='/contacto'  component={Contacto}/>
-          </Switch>
-          </Router>
+            <NavBar/>            
+            <ItemList className="center" data={items}/>  
+            <Switch>
+              <Route path='/servicios' exact component={Servicios}></Route>
+              <Route path='/diseños'  exact component={Diseños}></Route>
+              <Route path='/galeria'  exact component={Galeria}></Route>
+              <Route path='/contacto'  exact component={Contacto}></Route>
+              <Route path='/ItemDetail'  exact component={ItemDetail}></Route>
+            </Switch>
+        </Router>
+        
       </div>     
     )
 }

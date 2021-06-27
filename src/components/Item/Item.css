@@ -11,6 +11,7 @@
     color: #e1bee7;
     margin: 100px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .container{
@@ -20,6 +21,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin:auto;
+    text-decoration: none;
 
 }
 .container.card{
@@ -31,6 +33,7 @@
     margin:20px;
     text-align: center;
     transition: all 0.25s;
+    text-decoration: none;
 }
 
 .container .card:hover{
@@ -45,12 +48,14 @@
 
 .container .card h3{
     font-weight: 600;
+    text-decoration: none;
 }
 
 .container .card p{
     padding: 0 1rem;
     font-size: 16px;
     font-weight: 300;
+    text-decoration: none;
 }
 
 .centro{
