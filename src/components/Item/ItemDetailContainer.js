@@ -1,36 +1,40 @@
-import React, {useEffect,useState} from 'react'
+import React, {useEffect,useState,setTimeout} from 'react'
 import ItemDetail from './ItemDetail'
 
-const ItemDetailConteiner = (prod) => {
-    const [productos, setProductos] = useState([])
+import imagenes from '../../img/imagenes.js';
+
+const ItemDetailConteiner = () => {
+  
+  const [producto, setProducto] = useState([])
     useEffect(() => {
+    
       const prom= new Promise((resolve, reject)=>{
           setTimeout(()=>{
               resolve([
-                { id: prod.id, name: prod.name, price: prod.price, description:prod.description, img:imagenes.pajaro},
+                { id: 1, name: "Pajaro", price: 20, description:"bordado pajaro azul", img:imagenes.pajaro},
+                { id: 2, name: "Zorro", price: 150, description:"zorro", img:imagenes.zorrito },
+                { id: 3, name: "Gato", price: 60, description:"bordado gato", img:imagenes.gato},
+                { id: 4, name: "Conejo", price: 100, description:"bordado conejo", img:imagenes.conejo}
               ])
-  
           }, 2000)
       })
       prom.then((resultado)=>{
-          setProductos(resultado);
+          setProducto(resultado);
       })
   }, [])
   
     return ( 
         <div className="list">
-            {productos.map(produc =>
+            {producto.map(product =>
               <div> 
-                <ul key={produc.id}>
-                    <ItemDetail/>
+                <ul key={product.id}>
+                    <ItemDetail dataItem={items}/>
                     <ItemCount stock={5} initial={1}/>
-                    <h1>pepe</h1>
                 </ul>
               </div>
-              
               )}
-  
         </div>
     );
     }
 export default ItemDetailConteiner
+
