@@ -10,9 +10,9 @@ function ItemCount(props){
         <div>
             <p className="centro">{count}</p>
             <div className="contador centro">
-                <Button className="btn btn1" onClick={() =>  setCount(count < props.stock ? count+props.initial: count === props.stock)}>+</Button>
+                <Button className="btn btn1" onClick={() =>  setCount(count <= props.stock ? count+props.initial: count === props.stock)}>+</Button>
                 <Button className="btn btn1">agregar al carrito</Button>
-                <Button className="btn btn1" onClick={() => setCount(count > props.initial ? count-props.initial: count === props.initial)}>-</Button>
+                <Button className="btn btn1" onClick={() => setCount(count => props.initial ? count-props.initial: count === props.initial)}>-</Button>
             </div>
         </div>
         )

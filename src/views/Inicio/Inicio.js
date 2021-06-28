@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Galeira() {
+function Inicio() {
     return (
         <div>
             <h1 className="title"> Galeria</h1>
@@ -9,4 +9,4 @@ function Galeira() {
     )
 }
 
-export default Galeira
+export default Inicio
