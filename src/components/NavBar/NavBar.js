@@ -1,6 +1,6 @@
 import React from 'react'
 import CartWidget from "../CartWidget/CartWidget.js"
-import { BrowserRouter as Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 import logo from '../../img/aro-de-bordado.svg'
 import './NavBar.css'
 
@@ -9,8 +9,8 @@ function NavBar() {
             <nav className="nav">
                 <div className="nav-div">
                         <img className="logo1 nav-link" alt="" src={logo}/>
-                    <button class="nav-toggle" aria-label="Abrir menú">
-                        <i class="fas fa-bars"></i>
+                    <button className="nav-toggle" aria-label="Abrir menú">
+                        <i className="fas fa-bars"></i>
                     </button>
                         <ul className="nav-menu nav-menu_visible">
                             <li className="nav-menu-item">

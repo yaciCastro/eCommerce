@@ -18,5 +18,4 @@ function ItemCount(props){
         )
     }
 
-
 export default ItemCount;   
