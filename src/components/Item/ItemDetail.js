@@ -1,25 +1,50 @@
 import React from 'react'
+import {useEffect, useState} from "react";
+import ItemCount from './ItemCount';
 import imagenes from '../../img/imagenes.js';
 
-const itemsData = [
-    { id: 1, name: "Pajaro", price: 20, description:"bordado pajaro azul", img:imagenes.pajaro},
-    { id: 2, name: "Zorro", price: 150, description:"zorro", img:imagenes.zorrito },
-    { id: 3, name: "Gato", price: 60, description:"bordado gato", img:imagenes.gato},
-    { id: 4, name: "Conejo", price: 100, description:"bordado conejo", img:imagenes.conejo}
-  ];
 
-const ItemDetail = () => {
-    
-    return (
-        <div>
-            <div className='card'>
-                <img alt="" src={itemsData.img}/>
-                <h4 className="centro">{itemsData.name} - ${itemsData.price}</h4>
-                <p className="centro">{itemsData.description}</p>
-            </div>
-        </div>
-    )
-}
+        const ItemDetail = ({item}) => {
+            const [img, setImg] = useState();
+            const [detalles, setDetalles] = useState();
+            const [precio, setPrecio] = useState();
+        
+        function timeout(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+
+        }
+        
+        async function funcAsync(item) {
+            await timeout(2000);
+            return item
+        }
+            useEffect(() => {
+                
+                const item = {
+                    //prueba
+                    "img": imagenes.zorrito,
+                    "detalles": "producto",
+                    "precio":"2000"
+
+                };
+        
+                funcAsync(item).then(resultItem => {
+                    setImg(resultItem.img);
+                    setDetalles(resultItem.detalles);
+                    setPrecio(resultItem.precio)
+                });
+        
+            }, []);
+        
+            return (
+                <div>
+                    <img src={img}/>
+                    <h1>{detalles}</h1>
+                    <h1>{precio}</h1>
+                    <ItemCount initial={1} stock={5}/>
+                </div>
+            );
+        }
 
 export default ItemDetail
 
