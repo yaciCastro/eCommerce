@@ -17,21 +17,22 @@ import Contacto from './views/Contacto/Contacto.js'
 
 function App() {
   return (  
-      <CartProvider>
         <div>  
-          <Router>          
-              <NavBar/>
-              <Switch>
-                <Route path='/inicio' component={Inicio}/>
-                <Route path='/servicios' component={Servicios}/>
-                <Route path='/productos'  component={Productos}/>
-                <Route path='/contacto'  component={Contacto}/>
-                <Route path='/itemDetail'  component={ItemDetailContainer}/>
-                <Route path='/cart' component={Cart}/>
-              </Switch>
-          </Router>
+        <CartProvider>
+            <Router>          
+                <NavBar/>
+                <Switch>
+                  <Route path='/inicio' component={Inicio}/>
+                  <Route path='/servicios' component={Servicios}/>
+                  <Route path='/productos'  component={Productos}/>
+                  <Route path='/contacto'  component={Contacto}/>
+                  <Route path='/itemDetail'  component={ItemDetailContainer}/>
+                  <Route path='/cart' component={ Cart}/>
+                </Switch>
+            </Router>
+          </CartProvider> 
         </div>
-      </CartProvider>     
+          
     )
 }
 
