@@ -38,7 +38,7 @@ import imagenes from '../../img/imagenes.js';
         
             return (
                 <div>
-                    <img src={img}/>
+                    <img alt="" src={img}/>
                     <h1>{detalles}</h1>
                     <h1>{precio}</h1>
                     <ItemCount initial={1} stock={5}/>

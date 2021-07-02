@@ -1,9 +1,11 @@
-import React, {useEffect,useState,setTimeout} from 'react'
+import React from 'react'
 
-import imagenes from '../../img/imagenes.js';
+import ItemDetail from './ItemDetail.js';
 
-const ItemDetailConteiner = () => {
-
+function ItemDetailContainer(){
+    <div>
+        <ItemDetail/>
+    </div>
 }
-export default ItemDetailConteiner
+export default ItemDetailContainer
 

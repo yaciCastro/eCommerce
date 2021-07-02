@@ -1,4 +1,3 @@
-import { AddAlarmRounded, SettingsOverscanRounded, Style } from '@material-ui/icons'
 import React, { useState } from 'react'
 import {Button} from 'semantic-ui-react'
 import './ItemCount.css'

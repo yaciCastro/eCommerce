@@ -1,13 +1,14 @@
-import React, {useState,useEffect}from "react";
+import React, {useState,useEffect, useContext}from "react";
 
 //COMPONENTES
 import Item from "./Item";
-
+import CartContext from '../Cart/CartContext'
 //IMG
 import imagenes from '../../img/imagenes.js';
 import './ItemList.css'
 
 const ItemsList = () => {
+const value = useContext(CartContext)
 const [productos, setProductos] = useState([])
 useEffect(() => {
   const prom= new Promise((resolve)=>{
@@ -31,6 +32,7 @@ return (
           <div> 
             <ul key={prod.id}>
               <Item dataItem={prod} />
+              <div>{value}</div>
             </ul>
           </div>
         )}
