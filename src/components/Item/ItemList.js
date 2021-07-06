@@ -3,10 +3,53 @@ import React, {useState,useEffect, useContext}from "react";
 //COMPONENTES
 import Item from "./Item";
 import CartContext from '../Cart/CartContext'
+
 //IMG
 import imagenes from '../../img/imagenes.js';
 import './ItemList.css'
 
+const ItemList = ({item}) => {
+  return (
+      <div>
+          {item.map((item) => {
+              return <Item key={item.id}
+                  id={item.id} 
+                  img={item.image}
+                  title={item.name} 
+                  price={item.price}
+                  description={item.description}
+                  />
+          })}
+      </div>
+  );
+};
+
+export default ItemList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const ItemsList = () => {
 const value = useContext(CartContext)
 const [productos, setProductos] = useState([])
@@ -32,7 +75,6 @@ return (
           <div> 
             <ul key={prod.id}>
               <Item dataItem={prod} />
-              <div>{value}</div>
             </ul>
           </div>
         )}
@@ -41,3 +83,4 @@ return (
 }
 
 export default ItemsList;
+*/
